@@ -4,18 +4,19 @@ import { Card } from "./Card";
 
 type PackageCardProps = ComponentProps<'div'> & {
 	icon: ReactNode
+	title: string
 }
 
-export function PackageCard({ icon, ...props }: PackageCardProps) {
+export function PackageCard({ icon, title, ...props }: PackageCardProps) {
 	return (
 		<Card {...props}>
-			<div className="bg-linear-to-tr from-purple-500 to-blue-500  rounded-full flex items-center justify-center mb-4 -mt-16">
+			<div className="bg-linear-to-tr from-purple-500 to-blue-500 rounded-full flex items-center justify-center mb-4 -mt-16">
 				<div className="w-16 h-16 flex items-center justify-center">
 					{icon}
 				</div>
 			</div>
 
-			<h2 className="text-2xl font-semibold mb-4">Semestral</h2>
+			<h2 className="text-2xl font-semibold mb-4">{title}</h2>
 
 			<ul className="space-y-2 text-sm text-gray-200">
 				<li>✔ Planejamento de Treino em até 48h úteis</li>

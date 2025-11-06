@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar"
 
 export function Hero() {
 	return (
-		<section className="w-full flex flex-col gap-6 pb-16 ">
+		<section className="w-full flex flex-col gap-6 pb-16 select-none">
 			<Navbar />
 			
 			<div className="flex justify-between gap-16">
@@ -16,8 +16,8 @@ export function Hero() {
 						
 						<p className="text-gray-400 font-light text-sm">As vagas são limitadas, então corra e faça sua matrícula.</p>
 
-						<Button onClick={() => {}} className="mt-4">
-							FAZER MINHA MATRÍCULA
+						<Button onClick={() => { document.location = '/#contact' }} className="mt-4">
+							Saber mais
 						</Button>
 					</Fade>
 				</div>

@@ -1,3 +1,4 @@
+import { About } from './sections/About'
 import { Contact } from './sections/Contact'
 import { Hero } from './sections/Hero'
 import { Packages } from './sections/Packages'
@@ -14,6 +15,8 @@ function App() {
         <Packages />
 
         <Contact />
+
+        <About />
       </main>
     </div>
   )

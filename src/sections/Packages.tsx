@@ -4,16 +4,16 @@ import { Fade } from "react-awesome-reveal";
 
 export function Packages() {
 	return (
-		<section className="w-full flex flex-col gap-12">
+		<section className="w-full flex flex-col gap-12" id="packages">
 			<Fade cascade direction="up" triggerOnce>
 				<h1 className="text-center">Pacotes</h1>
 			</Fade>
 
-			<div className="flex gap-8 justify-center px-16 pb-12 pt-4">
+			<div className="flex flex-col lg:flex-row gap-16 lg:gap-8 justify-center px-8 lg:px-16 pb-12 pt-4">
 				<Fade cascade triggerOnce>
-					<PackageCard icon={<Star />} className="h-108 max-w-88" />
-					<PackageCard icon={<Flame />} className="h-108 max-w-88" />
-					<PackageCard icon={<Trophy />} className="h-108 max-w-88" />
+					<PackageCard icon={<Star />} title="Starter" className="lg:max-w-88" />
+					<PackageCard icon={<Flame />} title="Advanced" className="lg:max-w-88" />
+					<PackageCard icon={<Trophy />} title="Pro" className="lg:max-w-88" />
 				</Fade>
 			</div>
 		</section>
