@@ -23,7 +23,7 @@ export function Contact() {
 				scrollTrigger: {
 					trigger: triggerRef.current,
 					start: 'top 80%',
-					end: 'bottom 70%',
+					end: 'bottom 50%',
 					toggleActions: 'play none none none',
 					scrub: true
 				}
@@ -48,7 +48,7 @@ export function Contact() {
 				scrollTrigger: {
 					trigger: triggerRef.current,
 					start: 'top 80%',
-					end: 'bottom 70%',
+					end: 'bottom 50%',
 					toggleActions: 'play none none none',
 					scrub: true
 				}
@@ -57,7 +57,7 @@ export function Contact() {
 	}, { scope: triggerRef })
 
 	return (
-		<section className="flex justify-center mb-10 lg:px-12 relative mt-20" id="contact" ref={triggerRef}>
+		<section className="flex justify-center mb-10 lg:px-12 relative md:mt-20" id="contact" ref={triggerRef}>
 			<div className="absolute left-30 z-50 hidden lg:block">
 				<img src="/water2.png" id="water" className="absolute w-96 h-60 object-fill" alt="" />
 				<img src="/squeeze2.png" id="squeeze" className="w-40 -mt-8 object-contain" alt="" />

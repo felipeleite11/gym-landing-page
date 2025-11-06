@@ -19,7 +19,7 @@ export function Button({ className, variant = 'default', ...props }: ButtonProps
 		case 'default':
 			variantClasses += twMerge(
 				variantClasses, 
-				'rounded-xl text-white bg-linear-to-r from-blue-900 to-pink-800 shadow-lg shadow-pink-500/20 hover:scale-105',
+				'rounded-xl text-white bg-linear-to-r from-blue-900 to-pink-800 shadow-lg shadow-pink-500/20 md:hover:scale-105',
 				'border border-[#5e3268]'
 			)
 			break

@@ -17,14 +17,14 @@ export function Hero() {
 						
 						<p className="text-gray-400 font-light text-sm">As vagas são limitadas, então corra e faça sua matrícula.</p>
 
-						<Button onClick={() => { document.location = '/#contact' }} className="mt-4">
+						<Button onClick={() => { document.location = '/#contact' }} className="mt-4 w-full sm:w-fit">
 							Saber mais
 						</Button>
 					</Fade>
 				</div>
 
-				<Fade direction="up" delay={1500} triggerOnce>
-					<div className="flex-col gap-2 pr-16 hidden lg:flex">
+				<Fade direction="up" delay={1500} triggerOnce className="hidden lg:block">
+					<div className="flex-col gap-2 pr-16">
 						<span className="text-sm text-gray-400 text-right mr-8">Transformando metas em conquistas.</span>
 
 						<div className="w-[560px] h-[296px] rounded-lg overflow-hidden">

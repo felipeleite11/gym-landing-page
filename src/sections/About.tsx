@@ -4,7 +4,7 @@ import { Card } from "../components/Card"
 export function About() {
 	return (
 		<section className="flex justify-center mb-10 lg:mb-0" id="about">
-			<div className="relative flex gap-10 w-108 px-4 lg:px-0 lg:mt-20 lg:w-228">
+			<div className="relative flex gap-10 w-full px-8 lg:px-0 lg:mt-20 lg:w-228">
 				<Fade direction="left" triggerOnce delay={300}>
 					<Card className="items-start lg:w-160 lg:m-12 gap-6" variant="glass">
 						<h1>Kleizy Guimarães</h1>
