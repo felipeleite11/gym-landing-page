@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal"
+import { Player } from 'video-react'
 import { Button } from "../components/Button"
 import { Navbar } from "../components/Navbar"
 
@@ -26,7 +27,11 @@ export function Hero() {
 					<div className="flex-col gap-2 pr-16 hidden lg:flex">
 						<span className="text-sm text-gray-400 text-right mr-8">Transformando metas em conquistas.</span>
 
-						<iframe width="560" height="315" className="max-w-lg" src="https://www.youtube.com/embed/ZYUAZRIKw-U?si=MGgj9CVh1cUE6hy6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+						<div className="w-[560px] h-[296px] rounded-lg overflow-hidden">
+							<Player loop autoPlay muted {...({ loop: true } as any)} disableDefaultControls>
+								<source src="/video-hero.mp4" />
+							</Player>
+						</div>
 					</div>
 				</Fade>
 			</div>

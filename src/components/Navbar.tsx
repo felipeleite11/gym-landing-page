@@ -10,11 +10,11 @@ export function Navbar() {
 
 	const menuRef = useRef<HTMLDivElement>(null)
 	const rippleOpenAnimation = useRef<gsap.core.Timeline>(null)
-	const rippleCloseAnimation = useRef<gsap.core.Timeline>(null)
+	const triggerOpenAnimation = useRef<gsap.core.Timeline>(null)
 
 	useGSAP(() => {
 		rippleOpenAnimation.current = gsap.timeline({ paused: true })
-		rippleCloseAnimation.current = gsap.timeline({ paused: true })
+		triggerOpenAnimation.current = gsap.timeline({ paused: true })
 
 		rippleOpenAnimation.current.to('#ripple', {
 			width: isMobile ? '94dvh' : '78dvw',
@@ -23,30 +23,32 @@ export function Navbar() {
 			right: isMobile ? '-47dvh' : '-39dvw'
 		})
 
-		rippleCloseAnimation.current.to('#ripple', {
-			width: 0,
-			height: 0
+		triggerOpenAnimation.current.to('#menu-icon', {
+			right: -180,
+			duration: .1
 		})
 	}, { scope: menuRef })
 
 	useEffect(() => {
 		if(isOpen) {
       		rippleOpenAnimation.current?.restart()
+      		triggerOpenAnimation.current?.restart()
 		} else {
 			rippleOpenAnimation.current?.reverse()
+			triggerOpenAnimation.current?.reverse()
 		}
 	}, [isOpen])
 	
 	return (
 		<div className="flex justify-between items-center w-full pl-8 pr-12 lg:px-12">
 			<img src="/logo3.png" className="h-11 hidden lg:block" />
-			<img src="/logo2.png" className="h-18 lg:hidden" />
-			<img src="/logo2.png" className="h-24 mx-auto mt-12 hidden lg:block" />
+			<img src="/logo5.png" className="h-18 lg:hidden" />
+			<img src="/logo5.png" className="h-24 mx-auto mt-12 hidden lg:block" />
 
-			<div ref={menuRef}>
+			<div ref={menuRef} className="relative">
 				<div 
 					id="menu-icon" 
-					className={cn('text-gray-400 cursor-pointer hover:opacity-80 fixed z-20', { open: isOpen })}
+					className={cn('text-gray-400 cursor-pointer hover:opacity-80 fixed z-20', { 'open': isOpen })}
 					onClick={() => { setIsOpen(old => !old) }}
 				>
 					<span></span>
@@ -59,21 +61,27 @@ export function Navbar() {
 					<nav className={cn('fixed top-32 sm:top-40 right-8 sm:right-34 z-20 hidden', { block: isOpen })}>
 						<ul className="text-xl text-gray-600 space-y-6 w-56">
 							<Fade cascade damping={0.1} delay={200}>
-								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer">
+								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer outline-0">
 									<a href="/#about" onClick={() => { setIsOpen(false) }}>
 										Sobre mim
 									</a>
 								</li>
 
-								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer">
+								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer outline-0">
 									<a href="/#packages" onClick={() => { setIsOpen(false) }}>
 										Pacotes
 									</a>
 								</li>
 
-								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer">
+								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer outline-0">
 									<a href="/#contact" onClick={() => { setIsOpen(false) }}>
 										Contato
+									</a>
+								</li>
+
+								<li className="hover:text-gray-800 hover:scale-105 transition-all cursor-pointer outline-0">
+									<a href="#" onClick={() => { setIsOpen(false) }}>
+										Loja
 									</a>
 								</li>
 							</Fade>

@@ -7,19 +7,19 @@ export function About() {
 			<div className="relative flex gap-10 w-108 px-4 lg:px-0 lg:mt-20 lg:w-228">
 				<Fade direction="left" triggerOnce delay={300}>
 					<Card className="items-start lg:w-160 lg:m-12 gap-6" variant="glass">
-						<h1>Juliana Silva</h1>
+						<h1>Kleizy Guimarães</h1>
 
 						<p className="text-gray-400 text-sm leading-relaxed lg:max-w-116">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque <span className="font-semibold text-white">laborum</span>, sequi impedit voluptatem dolorum soluta doloribus unde <span className="font-semibold text-white">illo et</span> asperiores corrupti ipsum aliquid! Rem velit blanditiis expedita, explicabo quae fugiat?
+							Sou Kleizy Guimarães, personal trainer <span className="font-semibold text-white">especializada</span> em musculação e treinamento funcional. Meu objetivo é ajudar você a <span className="font-semibold text-white">transformar</span> o seu corpo e sua rotina, com um acompanhamento sério, personalizado e focado em <span className="font-semibold text-white">resultados reais</span>.
 						</p>
 
 						<p className="text-gray-400 text-sm leading-relaxed lg:max-w-105">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque <span className="font-semibold text-white">laborum</span>, sequi impedit voluptatem dolorum soluta doloribus unde.
+							O treino vai muito <span className="font-semibold text-white">além da estética</span> — é sobre disciplina, superação e bem-estar. Cada aluno tem um ponto de partida e um <span className="font-semibold text-white">objetivo diferente</span>, e é justamente por isso que desenvolvo programas de treino <span className="font-semibold text-white">individualizados</span>, adaptados à sua rotina, nível de condicionamento e metas pessoais.
 						</p>
 					</Card>
 				</Fade>
 
-				<img src="/woman.png" alt="" className="absolute hidden lg:block bottom-0 right-0 w-105" />
+				<img src="/woman3.png" alt="" className="absolute hidden lg:block bottom-0 right-0 w-105" />
 			</div>
 		</section>
 	)
